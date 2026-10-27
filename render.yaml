@@ -1,0 +1,14 @@
+# Render Blueprint — proxy do CIFLUC (free tier).
+# PROXY_ORIGIN e PROXY_SECRET são definidos no dashboard (sync: false)
+# para que NENHUM segredo ou IP fique versionado, mesmo em repo público.
+services:
+  - type: web
+    name: ciflucsistema
+    runtime: docker
+    plan: free
+    healthCheckPath: /ping
+    envVars:
+      - key: PROXY_ORIGIN
+        sync: false
+      - key: PROXY_SECRET
+        sync: false

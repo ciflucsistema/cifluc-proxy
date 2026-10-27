@@ -1,0 +1,3 @@
+# Nada sensível deve entrar aqui: PROXY_ORIGIN/PROXY_SECRET ficam no Render.
+.env
+*.log
